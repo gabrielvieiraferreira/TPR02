@@ -17,11 +17,11 @@ bool is_prime(int num) {
 
 void find_prime_sum_decomposition(int num) {
     if (num <= 2) {
-        printf("O número deve ser maior que 2 e par.\n");
+        printf("O nÃºmero deve ser maior que 2.\n");
         return;
     }
 
-    printf("Decomposição de %d como a soma de dois números primos:\n", num);
+    printf("DecomposiÃ§Ã£o de %d como a soma de dois nÃºmeros primos:\n", num);
 
     for (int i = 2; i <= num / 2; i++) {
         if (is_prime(i) && is_prime(num - i)) {
@@ -30,13 +30,13 @@ void find_prime_sum_decomposition(int num) {
         }
     }
 
-    printf("Não foi possível encontrar uma decomposição.\n");
+    printf("NÃ£o foi possÃ­vel encontrar uma decomposiÃ§Ã£o.\n");
 }
 
 int main() {
     int num;
 
-    printf("Digite um número inteiro par maior que 2: ");
+    printf("Digite um nÃºmero inteiro maior que 2: ");
     scanf("%d", &num);
 
     find_prime_sum_decomposition(num);
